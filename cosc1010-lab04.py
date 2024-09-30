@@ -1,12 +1,9 @@
-# Your Name Here
+# Lee Marchant
 # UWYO COSC 1010
-# Submission Date
-# Lab 03 
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# 09/30/24
+# Lab 04 
+# Lab Section: 14
+# Sources:Chat-GPT-4. (09/30/24). "Can you give me an example of adding all the values in a list using the append function but NOT using the sum function?" Generated using OpenAI. https://chatgpt.com/ 
 
 
 
@@ -93,13 +90,24 @@ min_temps = [
     -1, -1, 11, 13
 ]
 
+
 # The above two lists are datasets for the maximum and minimum temperatures for Laramie in 2023.
 # Each of these lists has the same length, indicating that they both have the same index positions.
 # Write a single for loop to calculate both the average maximum temperature and the average minimum temperature.
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
 
+
+totalmax = 0
+totalmin = 0
+for index in range(len(max_temps)):
+    totalmax = totalmax + max_temps[index]
+    totalmin = totalmin + min_temps[index]
+print(f'The maximum temp average is {totalmax/(len(max_temps))} and the minimum temp average is {totalmin/(len(max_temps))}')
+
+
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
 
-
+temps = max_temps + min_temps
+print(f'The maximum recorded temperature was {max(temps)} and the minimum temperature was {min(temps)} degrees')
